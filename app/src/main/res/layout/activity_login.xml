@@ -27,8 +27,20 @@
         android:paddingLeft="25sp"
         android:paddingRight="25sp">
 
+        <TextView
+            android:id="@+id/notification_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#ffbc00"
+            android:gravity="center"
+            android:padding="12sp"
+            android:textColor="#000"
+            android:visibility="gone"/>
         <!-- Email Address -->
         <EditText
+            android:id="@+id/email_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/e_mail_address"
@@ -49,6 +61,7 @@
 
         <!-- Password -->
         <EditText
+            android:id="@+id/password_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password"
@@ -63,6 +76,7 @@
 
         <!-- Sign In -->
         <Button
+            android:id="@+id/sign_in"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/sign_in"

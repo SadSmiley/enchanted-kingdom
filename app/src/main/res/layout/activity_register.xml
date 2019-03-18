@@ -26,6 +26,17 @@
         android:orientation="vertical"
         android:padding="25sp">
 
+        <TextView
+            android:id="@+id/notification_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#ffbc00"
+            android:gravity="center"
+            android:padding="12sp"
+            android:textColor="#000"
+            android:visibility="gone"/>
         <EditText
             android:id="@+id/first_name"
             android:layout_width="match_parent"
@@ -150,6 +161,7 @@
             android:background="#bbb"/>
 
         <Button
+            android:id="@+id/create_account"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:height="20sp"

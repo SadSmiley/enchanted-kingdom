@@ -1,9 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".register.RegisterActivity">
+    tools:context=".register.RegisterActivity"
+    android:background="@drawable/bg">
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ekoneliner"
+        android:paddingTop="25sp"
+        android:paddingLeft="25sp"
+        android:paddingRight="25sp"
+        android:id="@+id/header_logo_register"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header_logo_register">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="25sp">
+
+        <EditText
+            android:id="@+id/first_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#aaa"
+            android:textColorHint="#aaa"
+            android:background="#fff"
+            android:padding="10sp"
+            android:hint="@string/first_name"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="2px"
+            android:minHeight="2px"
+            android:background="#bbb"/>
+
+        <EditText
+            android:id="@+id/last_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#aaa"
+            android:textColorHint="#aaa"
+            android:background="#fff"
+            android:padding="10sp"
+            android:hint="@string/last_name"/>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="2px"
+            android:minHeight="2px"
+            android:background="#bbb"/>
+
+        <EditText
+            android:id="@+id/birthday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#aaa"
+            android:textColorHint="#aaa"
+            android:background="#fff"
+            android:padding="10sp"
+            android:hint="@string/birthday"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="2px"
+            android:minHeight="2px"
+            android:background="#bbb"/>
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#aaa"
+            android:textColorHint="#aaa"
+            android:background="#fff"
+            android:padding="10sp"
+            android:hint="@string/address"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="2px"
+            android:minHeight="2px"
+            android:background="#bbb"/>
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#aaa"
+            android:textColorHint="#aaa"
+            android:background="#fff"
+            android:padding="10sp"
+            android:hint="@string/e_mail_address"
+            android:inputType="textEmailAddress"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="2px"
+            android:minHeight="2px"
+            android:background="#bbb"/>
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#aaa"
+            android:textColorHint="#aaa"
+            android:background="#fff"
+            android:padding="10sp"
+            android:hint="@string/password"
+            android:inputType="textPassword"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="2px"
+            android:minHeight="2px"
+            android:background="#bbb"/>
+
+        <EditText
+            android:id="@+id/re_type_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#aaa"
+            android:textColorHint="#aaa"
+            android:background="#fff"
+            android:padding="10sp"
+            android:hint="@string/re_type_password"
+            android:inputType="textPassword"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="2px"
+            android:minHeight="2px"
+            android:background="#bbb"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:height="20sp"
+            android:text="@string/create_account"
+            android:background="#EE5101"
+            android:textColor="#fff"
+            android:textAllCaps="false"
+            android:minHeight="40sp"
+            android:layout_marginTop="10sp"/>
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

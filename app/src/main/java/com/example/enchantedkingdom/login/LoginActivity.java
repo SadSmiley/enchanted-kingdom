@@ -1,7 +1,9 @@
-package com.example.enchantedkingdom;
+package com.example.enchantedkingdom.login;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.enchantedkingdom.R;
 
 public class LoginActivity extends AppCompatActivity {
 

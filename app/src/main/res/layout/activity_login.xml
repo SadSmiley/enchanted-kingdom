@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
+    tools:context=".login.LoginActivity"
     android:background="@drawable/bg">
 
     <!-- Header Logo -->
@@ -35,7 +35,10 @@
             android:textColor="#aaa"
             android:textColorHint="#aaa"
             android:background="#fff"
-            android:padding="10sp"/>
+            android:padding="10sp"
+            android:drawableStart="@drawable/ic_envelope"
+            android:drawableLeft="@drawable/ic_envelope"
+            android:gravity="center"/>
 
         <ImageView
             android:layout_width="match_parent"
@@ -53,7 +56,10 @@
             android:textColor="#aaa"
             android:textColorHint="#aaa"
             android:background="#fff"
-            android:padding="10sp"/>
+            android:padding="10sp"
+            android:drawableLeft="@drawable/ic_lock"
+            android:drawableStart="@drawable/ic_lock"
+            android:gravity="center"/>
 
         <!-- Sign In -->
         <Button

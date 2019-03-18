@@ -13,9 +13,11 @@ import static com.example.enchantedkingdom.Constant.INVALID_EMAIL;
 import static com.example.enchantedkingdom.Constant.PLEASE_COMPLETE_INFORMATION;
 import static com.example.enchantedkingdom.Utility.showNotificationArea;
 import com.example.enchantedkingdom.R;
+import com.example.enchantedkingdom.member.index.IndexActivity;
 import com.example.enchantedkingdom.register.RegisterActivity;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity
+{
     private TextView signUp;
     private Context mContext = this;
     private EditText email;
@@ -23,13 +25,15 @@ public class LoginActivity extends AppCompatActivity {
     private TextView notificationArea;
     private Button signIn;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         initializeComponent();
     }
 
-    private void initializeComponent(){
+    private void initializeComponent()
+    {
         signUp = findViewById(R.id.sign_up);
         email = findViewById(R.id.email_login);
         password = findViewById(R.id.password_login);

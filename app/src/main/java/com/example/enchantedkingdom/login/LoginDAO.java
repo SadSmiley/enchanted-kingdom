@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import com.example.enchantedkingdom.ApiClass;
 import com.example.enchantedkingdom.MainActivity;
+import com.example.enchantedkingdom.member.index.IndexActivity;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
@@ -29,7 +30,7 @@ import static com.example.enchantedkingdom.Constant.USER_INFORMATION;
 
 public class LoginDAO {
 
-    public void login(final Context context , LoginVO vo, Button login){
+    public void login(final Context context , LoginVO vo){
         ApiClass api = new ApiClass();
         RequestParams params = new RequestParams();
         params.add("username", vo.getEmail());
@@ -98,7 +99,7 @@ public class LoginDAO {
                             save("EMAIL",email,context);
                             save("ADDRESS",address,context);
 
-                            context.startActivity(new Intent(context, MainActivity.class));
+                            context.startActivity(new Intent(context, IndexActivity.class));
                             ((Activity)context).finish();
 
 //                            String crypt = serverResp.getString("crypt");

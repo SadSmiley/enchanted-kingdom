@@ -4,23 +4,9 @@
     >
 
     <item
-        android:id="@+id/action_add"
+        android:id="@+id/action_home"
         android:enabled="true"
-        android:icon="@drawable/ic_add"
-        android:title="Add"
-        app:showAsAction="ifRoom"/>
-
-    <item
-        android:id="@+id/action_edit"
-        android:enabled="true"
-        android:icon="@drawable/ic_edit"
-        android:title="Edit"
-        app:showAsAction="ifRoom"/>
-
-    <item
-        android:id="@+id/action_remove"
-        android:enabled="true"
-        android:icon="@drawable/ic_remove"
-        android:title="Remove"
+        android:icon="@drawable/ic_home"
+        android:title="Home"
         app:showAsAction="ifRoom"/>
 </menu>

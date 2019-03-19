@@ -28,16 +28,8 @@ public class IndexActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId())
                 {
-                    case R.id.action_add:
-                        Toast.makeText(IndexActivity.this, "Action Add Clicked", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case R.id.action_edit:
-                        Toast.makeText(IndexActivity.this, "Action Edit Clicked", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case R.id.action_remove:
-                        Toast.makeText(IndexActivity.this, "Action Remove Clicked", Toast.LENGTH_SHORT).show();
+                    case R.id.action_home:
+                        Toast.makeText(IndexActivity.this, "Action Home Clicked", Toast.LENGTH_SHORT).show();
                         break;
                 }
 

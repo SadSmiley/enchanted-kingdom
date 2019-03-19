@@ -4,10 +4,12 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.enchantedkingdom.ApiClass;
 import com.example.enchantedkingdom.MainActivity;
+import com.example.enchantedkingdom.Utility;
 import com.example.enchantedkingdom.member.index.IndexActivity;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
@@ -23,14 +25,16 @@ import cz.msebera.android.httpclient.Header;
 import cz.msebera.android.httpclient.message.BasicHeader;
 
 import static com.example.enchantedkingdom.Constant.LOGGING_IN;
+import static com.example.enchantedkingdom.Constant.SIGN_IN;
 import static com.example.enchantedkingdom.SharedPreferences.*;
 import static com.example.enchantedkingdom.Constant.API_KEY;
 import static com.example.enchantedkingdom.Constant.LOGIN_URL_TEST;
 import static com.example.enchantedkingdom.Constant.USER_INFORMATION;
+import static com.example.enchantedkingdom.Utility.showNotificationArea;
 
 public class LoginDAO {
 
-    public void login(final Context context , LoginVO vo){
+    public void login(final Context context , LoginVO vo, final Button login, final TextView notificationArea){
         ApiClass api = new ApiClass();
         RequestParams params = new RequestParams();
         params.add("username", vo.getEmail());
@@ -38,8 +42,8 @@ public class LoginDAO {
         params.put("client_secret", API_KEY);
         params.put("client_id", 2);
         params.put("grant_type", "password");
-//        login.setText(LOGGING_IN);
-//        login.setEnabled(false);
+        login.setText(LOGGING_IN);
+        login.setEnabled(false);
         api.postByUrl(LOGIN_URL_TEST,params,new JsonHttpResponseHandler(){
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
@@ -50,22 +54,30 @@ public class LoginDAO {
 //                    loading.hideLoading();
                 } catch (JSONException e) {
                     e.printStackTrace();
+                    login.setText(SIGN_IN);
+                    login.setEnabled(true);
                 }
             }
 
             @Override
             public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
-                super.onFailure(statusCode, headers, throwable, errorResponse);
+                login.setText(SIGN_IN);
+                login.setEnabled(true);
+                showNotificationArea(notificationArea,errorResponse.toString());
             }
 
             @Override
             public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONArray errorResponse) {
-                super.onFailure(statusCode, headers, throwable, errorResponse);
+                login.setText(SIGN_IN);
+                login.setEnabled(true);
+                showNotificationArea(notificationArea,errorResponse.toString());
             }
 
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
-                super.onFailure(statusCode, headers, responseString, throwable);
+                login.setText(SIGN_IN);
+                login.setEnabled(true);
+                showNotificationArea(notificationArea,responseString);
             }
         });
     }
@@ -98,7 +110,6 @@ public class LoginDAO {
                             save("BIRTHDAY",birthday,context);
                             save("EMAIL",email,context);
                             save("ADDRESS",address,context);
-
                             context.startActivity(new Intent(context, IndexActivity.class));
                             ((Activity)context).finish();
 

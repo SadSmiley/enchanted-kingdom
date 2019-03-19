@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.enchantedkingdom.ApiClass;
+import com.example.enchantedkingdom.Constant;
 import com.example.enchantedkingdom.login.LoginActivity;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;

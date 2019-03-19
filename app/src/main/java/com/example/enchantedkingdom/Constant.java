@@ -18,4 +18,8 @@ public class Constant {
     public static final String PLEASE_COMPLETE_INFORMATION = "Please complete all information.";
     public static final String LOGGING_IN = "LOGGING IN...";
     public static final String SIGN_IN = "Sign in";
+
+
+    ///---------FONT------///
+    public static final String SIGNIKA_BOLD_FONT_PATH = "font/signika_bold.ttf";
 }

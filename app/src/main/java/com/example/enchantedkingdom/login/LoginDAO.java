@@ -63,7 +63,13 @@ public class LoginDAO {
             public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
                 login.setText(SIGN_IN);
                 login.setEnabled(true);
-                showNotificationArea(notificationArea,errorResponse.toString());
+                if(errorResponse.has("message")){
+                    try {
+                        showNotificationArea(notificationArea,errorResponse.getString("message"));
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
 
             @Override

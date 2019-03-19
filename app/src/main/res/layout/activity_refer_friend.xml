@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".member.referfriend.ReferFriendActivity"
+    android:background="@drawable/member_bg">
+
+    <ImageView
+        android:id="@+id/header_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/eksclusive_corner"
+        android:adjustViewBounds="true"
+        android:maxWidth="927sp"
+        android:maxHeight="334sp"
+        android:padding="25sp"/>
+
+    <TextView
+        android:id="@+id/text_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_below="@+id/header_image"
+        android:textColor="#FFF"
+        android:gravity="center"
+        android:text="@string/refer_friends"
+        android:layout_marginBottom="5sp"/>
+<ScrollView
+    android:layout_below="@id/text_header"
+    android:layout_above="@+id/manipis"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="15sp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_marginTop="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/qr_code"
+                android:adjustViewBounds="true"
+                android:maxWidth="250sp"
+                android:maxHeight="200sp"/>
+            <TextView
+                android:id="@+id/referral_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/referral_code"
+                android:textColor="#FFF"
+                android:gravity="center"
+                android:textSize="32sp"/>
+            <TextView
+                android:id="@+id/message_bot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/message_bottom"
+                android:textColor="#FFF"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:padding="15sp"/>
+        </LinearLayout>
+</ScrollView>
+    <!-- bottom -->
+    <ImageView
+        android:id="@+id/manipis"
+        android:layout_width="match_parent"
+        android:layout_height="2sp"
+        android:background="#802eac"
+        android:layout_above="@+id/makapal"/>
+    <ImageView
+        android:id="@+id/makapal"
+        android:layout_width="match_parent"
+        android:layout_height="10sp"
+        android:background="#ca65fd"
+        android:layout_above="@+id/bottom_navigation"/>
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/colorPrimary"
+        app:itemIconTint="@drawable/nav_item_color_state"
+        app:itemTextColor="@drawable/nav_item_color_state"
+        app:menu="@menu/bottom_navigation_main"
+        app:labelVisibilityMode="unlabeled"/>
+
+</RelativeLayout>

@@ -14,6 +14,8 @@ import static com.example.enchantedkingdom.Constant.PLEASE_COMPLETE_INFORMATION;
 import static com.example.enchantedkingdom.Utility.showNotificationArea;
 
 import com.example.enchantedkingdom.R;
+import com.example.enchantedkingdom.SharedPreferences;
+import com.example.enchantedkingdom.member.index.IndexActivity;
 import com.example.enchantedkingdom.register.RegisterActivity;
 
 public class LoginActivity extends AppCompatActivity
@@ -32,38 +34,47 @@ public class LoginActivity extends AppCompatActivity
         initializeComponent();
     }
 
-    private void initializeComponent()
-    {
-        signUp = findViewById(R.id.sign_up);
-        email = findViewById(R.id.email_login);
-        password = findViewById(R.id.password_login);
-        signIn = findViewById(R.id.sign_in);
-        notificationArea = findViewById(R.id.notification_area);
+    private void initializeComponent() {
+        if (!"".equals(SharedPreferences.getString("ACCESS_TOKEN", mContext)) &&
+                !"".equals(SharedPreferences.getString("USER_ID", mContext)) &&
+                !"".equals(SharedPreferences.getString("FULL_NAME", mContext)) &&
+                !"".equals(SharedPreferences.getString("BIRTHDAY", mContext)) &&
+                !"".equals(SharedPreferences.getString("EMAIL", mContext)) &&
+                !"".equals(SharedPreferences.getString("ADDRESS", mContext))) {
+            startActivity(new Intent(mContext, IndexActivity.class));
+            finish();
+        } else {
+            signUp = findViewById(R.id.sign_up);
+            email = findViewById(R.id.email_login);
+            password = findViewById(R.id.password_login);
+            signIn = findViewById(R.id.sign_in);
+            notificationArea = findViewById(R.id.notification_area);
 
-        signUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(mContext,RegisterActivity.class));
-            }
-        });
-
-        signIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if("".equals(email.getText().toString()) &&
-                        "".equals(password.getText().toString())){
-                    showNotificationArea(notificationArea,PLEASE_COMPLETE_INFORMATION);
-                }else if(!email.getText().toString().contains("@")){
-                    showNotificationArea(notificationArea,INVALID_EMAIL);
-                }else{
-                    LoginVO vo = new LoginVO();
-                    LoginDAO dao = new LoginDAO();
-                    vo.setEmail(email.getText().toString());
-                    vo.setPassword(password.getText().toString());
-                    dao.login(mContext, vo,signIn,notificationArea);
+            signUp.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(mContext, RegisterActivity.class));
                 }
-            }
-        });
+            });
+
+            signIn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if ("".equals(email.getText().toString()) &&
+                            "".equals(password.getText().toString())) {
+                        showNotificationArea(notificationArea, PLEASE_COMPLETE_INFORMATION);
+                    } else if (!email.getText().toString().contains("@")) {
+                        showNotificationArea(notificationArea, INVALID_EMAIL);
+                    } else {
+                        LoginVO vo = new LoginVO();
+                        LoginDAO dao = new LoginDAO();
+                        vo.setEmail(email.getText().toString());
+                        vo.setPassword(password.getText().toString());
+                        dao.login(mContext, vo, signIn, notificationArea);
+                    }
+                }
+            });
+        }
     }
 
 }

@@ -1,8 +1,11 @@
 package com.example.enchantedkingdom;
 
+import android.content.Context;
+import android.graphics.Typeface;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.TextView;
+
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -37,4 +40,10 @@ public class Utility {
             }
         }.start();
     }
+
+    public static Typeface setFont(Context context, String path) {
+        return Typeface.createFromAsset(context.getAssets(), path);
+    }
+
+
 }

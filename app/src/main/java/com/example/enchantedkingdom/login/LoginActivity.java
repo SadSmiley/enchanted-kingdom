@@ -12,8 +12,8 @@ import android.widget.TextView;
 import static com.example.enchantedkingdom.Constant.INVALID_EMAIL;
 import static com.example.enchantedkingdom.Constant.PLEASE_COMPLETE_INFORMATION;
 import static com.example.enchantedkingdom.Utility.showNotificationArea;
+
 import com.example.enchantedkingdom.R;
-import com.example.enchantedkingdom.member.index.IndexActivity;
 import com.example.enchantedkingdom.register.RegisterActivity;
 
 public class LoginActivity extends AppCompatActivity
@@ -60,7 +60,7 @@ public class LoginActivity extends AppCompatActivity
                     LoginDAO dao = new LoginDAO();
                     vo.setEmail(email.getText().toString());
                     vo.setPassword(password.getText().toString());
-                    dao.login(mContext, vo);
+                    dao.login(mContext, vo,signIn,notificationArea);
                 }
             }
         });

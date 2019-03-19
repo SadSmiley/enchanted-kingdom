@@ -1,5 +1,6 @@
 package com.example.enchantedkingdom.member.index;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
@@ -8,8 +9,11 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.enchantedkingdom.R;
+import com.example.enchantedkingdom.globals.BottomNavigation;
 
 public class IndexActivity extends AppCompatActivity {
+
+    private Context mContext = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,24 +21,6 @@ public class IndexActivity extends AppCompatActivity {
         setContentView(R.layout.activity_index);
 
         // Add Bottom Navigation
-        addBottomNavigation();
-    }
-
-    private void addBottomNavigation() {
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener()
-        {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                switch (menuItem.getItemId())
-                {
-                    case R.id.action_home:
-                        Toast.makeText(IndexActivity.this, "Action Home Clicked", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-
-                return true;
-            }
-        });
+        new BottomNavigation(mContext);
     }
 }

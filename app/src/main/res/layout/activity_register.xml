@@ -80,7 +80,8 @@
             android:textColorHint="#aaa"
             android:background="#fff"
             android:padding="10sp"
-            android:hint="@string/birthday"/>
+            android:hint="@string/yyyy_mm_dd_birthday"
+            android:inputType="date"/>
 
         <ImageView
             android:layout_width="match_parent"

@@ -24,12 +24,15 @@ import java.util.List;
 import cz.msebera.android.httpclient.Header;
 import cz.msebera.android.httpclient.message.BasicHeader;
 
+import static com.example.enchantedkingdom.Constant.ENVIRONMENT;
 import static com.example.enchantedkingdom.Constant.LOGGING_IN;
+import static com.example.enchantedkingdom.Constant.LOGIN_URL_LIVE;
 import static com.example.enchantedkingdom.Constant.SIGN_IN;
+import static com.example.enchantedkingdom.Constant.USER_INFORMATION_LIVE;
+import static com.example.enchantedkingdom.Constant.USER_INFORMATION_TEST;
 import static com.example.enchantedkingdom.SharedPreferences.*;
 import static com.example.enchantedkingdom.Constant.API_KEY;
 import static com.example.enchantedkingdom.Constant.LOGIN_URL_TEST;
-import static com.example.enchantedkingdom.Constant.USER_INFORMATION;
 import static com.example.enchantedkingdom.Utility.showNotificationArea;
 
 public class LoginDAO {
@@ -44,7 +47,7 @@ public class LoginDAO {
         params.put("grant_type", "password");
         login.setText(LOGGING_IN);
         login.setEnabled(false);
-        api.postByUrl(LOGIN_URL_TEST,params,new JsonHttpResponseHandler(){
+        api.postByUrl(ENVIRONMENT.equals("live") ? LOGIN_URL_LIVE : LOGIN_URL_TEST,params,new JsonHttpResponseHandler(){
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 try {
@@ -94,7 +97,7 @@ public class LoginDAO {
         rp.put("Authorization", accessToken);
         List<Header> headers = new ArrayList<Header>();
         headers.add(new BasicHeader("Authorization", accessToken));
-        api.getByUrlHeader(context, USER_INFORMATION,
+        api.getByUrlHeader(context,ENVIRONMENT.equals("live") ? USER_INFORMATION_LIVE : USER_INFORMATION_TEST,
                 headers.toArray(new Header[headers.size()])
                 , rp,
                 new JsonHttpResponseHandler() {

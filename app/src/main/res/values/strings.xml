@@ -20,4 +20,5 @@
     <string name="logout">LOGOUT</string>
     <string name="referral_code">EKMAGIC2K20</string>
     <string name="message_bottom">Use this code and get one month added to your membership!</string>
+    <string name="yyyy_mm_dd_birthday">YYYY-MM-DD (Birthday)</string>
 </resources>

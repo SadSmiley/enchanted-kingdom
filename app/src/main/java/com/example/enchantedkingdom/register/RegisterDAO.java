@@ -18,7 +18,9 @@ import org.json.JSONObject;
 
 import cz.msebera.android.httpclient.Header;
 
+import static com.example.enchantedkingdom.Constant.ENVIRONMENT;
 import static com.example.enchantedkingdom.Constant.LOADING;
+import static com.example.enchantedkingdom.Constant.REGISTER_URL_LIVE;
 import static com.example.enchantedkingdom.Constant.REGISTER_URL_TEST;
 
 public class RegisterDAO {
@@ -33,7 +35,7 @@ public class RegisterDAO {
         param.add("password",vo.getPassword());
         param.add("birthday",vo.getBirthday());
         createAccount.setText(LOADING);
-        api.postByUrl(REGISTER_URL_TEST,param,new JsonHttpResponseHandler(){
+        api.postByUrl(ENVIRONMENT.equals("live") ? REGISTER_URL_LIVE : REGISTER_URL_TEST,param,new JsonHttpResponseHandler(){
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 if (null != response) {

@@ -2,9 +2,15 @@ package com.example.enchantedkingdom;
 
 public class Constant {
     //---API URL---//
+    public static final String ENVIRONMENT = "live";
+
     public static final String REGISTER_URL_TEST = "http://192.168.1.149/api-enchanted-kingdom/public/api/user";
     public static final String LOGIN_URL_TEST = "http://192.168.1.149/api-enchanted-kingdom/public/oauth/token";
-    public static final String USER_INFORMATION = "http://192.168.1.149/api-enchanted-kingdom/public/api/user/info";
+    public static final String USER_INFORMATION_TEST = "http://192.168.1.149/api-enchanted-kingdom/public/api/user/info";
+
+    public static final String REGISTER_URL_LIVE = "http://ek.myoneworld.tech/api/user";
+    public static final String LOGIN_URL_LIVE = "http://ek.myoneworld.tech/oauth/token";
+    public static final String USER_INFORMATION_LIVE = "http://ek.myoneworld.tech/api/user/info";
 
 
     public static final String API_KEY = "TQrLloDLYWgwIcsP5teR5EEO56uXBVAPw7rrKt6K";

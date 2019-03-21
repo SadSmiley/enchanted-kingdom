@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".member.parkmap.ParkMapActivity"></activity>
         <activity android:name=".member.index.IndexActivity" />
         <activity
             android:name=".register.RegisterActivity"
@@ -27,7 +28,7 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".member.merchant.MerchantActivity" />
         <activity android:name=".member.referfriend.ReferFriendActivity" />
-        <activity android:name=".member.buyticket.BuyTicketActivity"></activity>
+        <activity android:name=".member.buyticket.BuyTicketActivity" />
     </application>
 
 </manifest>

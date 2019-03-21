@@ -2,6 +2,7 @@ package com.example.enchantedkingdom.globals;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.util.AttributeSet;
@@ -10,6 +11,8 @@ import android.widget.Toast;
 
 import com.example.enchantedkingdom.R;
 import com.example.enchantedkingdom.member.index.IndexActivity;
+import com.example.enchantedkingdom.member.parkmap.ParkMapActivity;
+import com.example.enchantedkingdom.register.RegisterActivity;
 
 public class BottomNavigation extends BottomNavigationView {
 
@@ -28,7 +31,7 @@ public class BottomNavigation extends BottomNavigationView {
                         Toast.makeText(context, "Action Home Clicked", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.action_map:
-                        Toast.makeText(context, "Action Map Clicked", Toast.LENGTH_SHORT).show();
+                        context.startActivity(new Intent(context, ParkMapActivity.class));
                         break;
                     case R.id.action_ticket:
                         Toast.makeText(context, "Action Ticket Clicked", Toast.LENGTH_SHORT).show();

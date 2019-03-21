@@ -11,7 +11,7 @@ import cz.msebera.android.httpclient.HttpEntity;
 
 public class ApiClass {
 
-    private AsyncHttpClient client = new AsyncHttpClient(true,80,443);
+    private AsyncHttpClient client = new AsyncHttpClient();
 
     public void getByUrl(String url, RequestParams params, AsyncHttpResponseHandler responseHandler) {
         client.get(url, params, responseHandler);

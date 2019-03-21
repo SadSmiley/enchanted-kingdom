@@ -5,14 +5,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.util.AttributeSet;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.example.enchantedkingdom.R;
 import com.example.enchantedkingdom.member.buyticket.BuyTicketCalendar;
 import com.example.enchantedkingdom.member.index.IndexActivity;
+import com.example.enchantedkingdom.member.merchant.MerchantActivity;
 import com.example.enchantedkingdom.member.showandentertainment.ShowAndEntertainmentActivity;
+import com.example.enchantedkingdom.member.parkmap.ParkMapActivity;
 
 public class BottomNavigation extends BottomNavigationView {
 
@@ -28,10 +28,10 @@ public class BottomNavigation extends BottomNavigationView {
                 switch (menuItem.getItemId())
                 {
                     case R.id.action_home:
-                        context.startActivity(new Intent(context,IndexActivity.class));
+                        context.startActivity(new Intent(context,MerchantActivity.class));
                         break;
                     case R.id.action_map:
-                        Toast.makeText(context, "Action Map Clicked", Toast.LENGTH_SHORT).show();
+                        context.startActivity(new Intent(context, ParkMapActivity.class));
                         break;
                     case R.id.action_ticket:
                         context.startActivity(new Intent(context,BuyTicketCalendar.class));

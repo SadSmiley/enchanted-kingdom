@@ -11,6 +11,7 @@ import com.example.enchantedkingdom.ApiClass;
 import com.example.enchantedkingdom.MainActivity;
 import com.example.enchantedkingdom.Utility;
 import com.example.enchantedkingdom.member.index.IndexActivity;
+import com.example.enchantedkingdom.member.merchant.MerchantActivity;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
@@ -116,7 +117,7 @@ public class LoginDAO {
                             save("BIRTHDAY",birthday,context);
                             save("EMAIL",email,context);
                             save("ADDRESS",address,context);
-                            context.startActivity(new Intent(context, IndexActivity.class));
+                            context.startActivity(new Intent(context, MerchantActivity.class));
                             ((Activity)context).finish();
 
 //                            String crypt = serverResp.getString("crypt");

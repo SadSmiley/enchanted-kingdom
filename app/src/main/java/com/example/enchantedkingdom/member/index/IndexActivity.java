@@ -12,6 +12,7 @@ import com.example.enchantedkingdom.globals.BottomNavigation;
 import com.example.enchantedkingdom.login.LoginActivity;
 import com.example.enchantedkingdom.member.buyticket.BuyTicketActivity;
 import com.example.enchantedkingdom.member.merchant.MerchantActivity;
+import com.example.enchantedkingdom.member.myprofile.MyProfileActivity;
 import com.example.enchantedkingdom.member.referfriend.ReferFriendActivity;
 
 import static com.example.enchantedkingdom.Constant.SIGNIKA_BOLD_FONT_PATH;
@@ -72,6 +73,12 @@ public class IndexActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(mContext,BuyTicketActivity.class));
+            }
+        });
+        myAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(mContext,MyProfileActivity.class));
             }
         });
         logout.setOnClickListener(new View.OnClickListener() {

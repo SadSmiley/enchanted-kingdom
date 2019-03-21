@@ -8,6 +8,7 @@ import android.widget.TextView;
 import com.example.enchantedkingdom.Constant;
 import com.example.enchantedkingdom.R;
 import com.example.enchantedkingdom.Utility;
+import com.example.enchantedkingdom.globals.BottomNavigation;
 
 import static com.example.enchantedkingdom.Utility.setFont;
 
@@ -26,10 +27,10 @@ public class ReferFriendActivity extends AppCompatActivity {
     }
 
     private void initializeComponent(){
+        new BottomNavigation(mContext);
         textHeader = findViewById(R.id.text_header);
         referralCode = findViewById(R.id.referral_code);
         bottomMessage = findViewById(R.id.message_bot);
-
         textHeader.setTypeface(setFont(mContext,Constant.SIGNIKA_BOLD_FONT_PATH));
         referralCode.setTypeface(setFont(mContext,Constant.SIGNIKA_BOLD_FONT_PATH));
         bottomMessage.setTypeface(setFont(mContext,Constant.SIGNIKA_BOLD_FONT_PATH));

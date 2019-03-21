@@ -34,22 +34,28 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:padding="10sp">
                     <ImageView
-                        android:layout_width="200sp"
-                        android:layout_height="150sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:src="@drawable/buy_ticket_1"
                         android:adjustViewBounds="true"
-                        android:maxHeight="200sp"/>
+                        android:maxHeight="200sp"
+                        android:maxWidth="150sp"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:padding="10sp">
                     <ImageView
-                        android:layout_width="200sp"
-                        android:layout_height="150sp"
-                        android:src="@drawable/buy_ticket_2"/>
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/buy_ticket_2"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="200sp"
+                        android:maxWidth="150sp"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -62,22 +68,62 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:padding="10sp">
                     <ImageView
-                        android:layout_width="200sp"
-                        android:layout_height="150sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:src="@drawable/buy_ticket_3"
                         android:adjustViewBounds="true"
-                        android:maxHeight="200sp"/>
+                        android:maxHeight="200sp"
+                        android:maxWidth="150sp"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:padding="10sp">
                     <ImageView
-                        android:layout_width="200sp"
-                        android:layout_height="150sp"
-                        android:src="@drawable/buy_ticket_4"/>
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/buy_ticket_4"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="200sp"
+                        android:maxWidth="150sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="10sp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/buy_ticket_5"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="200sp"
+                        android:maxWidth="150sp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="10sp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/buy_ticket_6"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="200sp"
+                        android:maxWidth="150sp"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

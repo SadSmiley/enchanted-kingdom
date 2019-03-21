@@ -27,7 +27,10 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".member.merchant.MerchantActivity" />
         <activity android:name=".member.referfriend.ReferFriendActivity" />
-        <activity android:name=".member.buyticket.BuyTicketActivity"></activity>
+        <activity android:name=".member.buyticket.BuyTicketActivity" />
+        <activity android:name=".member.buyticket.BuyTicketCalendar" />
+        <activity android:name=".member.showandentertainment.ShowAndEntertainmentActivity" />
+        <activity android:name=".member.myprofile.MyProfileActivity"></activity>
     </application>
 
 </manifest>

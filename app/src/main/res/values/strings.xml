@@ -13,11 +13,12 @@
     <string name="create_account">Create Account</string>
     <string name="my_account">MY ACCOUNT</string>
     <string name="merchants">MERCHANTS</string>
-    <string name="refer_friends">REFER A FRIENDS</string>
+    <string name="refer_friends">REFER A FRIEND</string>
     <string name="book_event">BOOK EVENT</string>
     <string name="faq">FAQ</string>
     <string name="settings">SETTINGS</string>
     <string name="logout">LOGOUT</string>
     <string name="referral_code">EKMAGIC2K20</string>
     <string name="message_bottom">Use this code and get one month added to your membership!</string>
+    <string name="my_profile">My Profile</string>
 </resources>

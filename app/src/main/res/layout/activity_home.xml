@@ -4,39 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".member.buyticket.BuyTicketCalendar"
-    android:background="@drawable/member_bg">
+    tools:context=".member.home.HomeActivity"
+    android:background="@drawable/home_bg">
+
+
 
     <ImageView
-        android:id="@+id/header_image"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/buy_ticket_header"
-        android:adjustViewBounds="true"
-        android:maxWidth="927sp"
-        android:maxHeight="334sp"
-        android:padding="25sp"/>
-
+        android:src="@drawable/ekoneliner"
+        android:paddingTop="25sp"
+        android:paddingLeft="25sp"
+        android:paddingRight="25sp"
+        android:id="@+id/header_logo_register"
+        android:adjustViewBounds="true"/>
     <ScrollView
+        android:layout_below="@id/header_logo_register"
         android:layout_above="@+id/manipis"
-        android:layout_below="@id/header_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
+            android:layout_height="0dp"
+            android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/the_magic_cards"
+            android:paddingTop="25sp"
+            android:paddingLeft="25sp"
+            android:paddingRight="25sp"
+            android:id="@+id/magic_card"
+            android:adjustViewBounds="true"
+            android:maxHeight="200sp"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/magic_all_year_round"
+            android:paddingTop="25sp"
+            android:paddingLeft="25sp"
+            android:paddingRight="25sp"
+            android:id="@+id/all_year_round"
+            android:adjustViewBounds="true"
+            android:maxHeight="150sp"/>
             <ImageView
-                android:id="@+id/calendar_holder"
-                android:padding="50sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/calendar_buy_ticket"
-                android:adjustViewBounds="true"/>
-
+                android:src="@drawable/captured_memories"
+                android:paddingTop="25sp"
+                android:paddingLeft="25sp"
+                android:paddingRight="25sp"
+                android:id="@+id/captured_moment"
+                android:adjustViewBounds="true"
+                android:maxWidth="300sp"
+                android:layout_marginBottom="10sp"/>
         </LinearLayout>
     </ScrollView>
-
 
     <!-- bottom -->
     <ImageView

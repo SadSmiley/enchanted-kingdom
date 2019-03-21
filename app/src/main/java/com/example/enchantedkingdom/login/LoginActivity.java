@@ -15,6 +15,7 @@ import static com.example.enchantedkingdom.Utility.showNotificationArea;
 
 import com.example.enchantedkingdom.R;
 import com.example.enchantedkingdom.SharedPreferences;
+import com.example.enchantedkingdom.member.home.HomeActivity;
 import com.example.enchantedkingdom.member.index.IndexActivity;
 import com.example.enchantedkingdom.member.merchant.MerchantActivity;
 import com.example.enchantedkingdom.register.RegisterActivity;
@@ -42,7 +43,7 @@ public class LoginActivity extends AppCompatActivity
                 !"".equals(SharedPreferences.getString("BIRTHDAY", mContext)) &&
                 !"".equals(SharedPreferences.getString("EMAIL", mContext)) &&
                 !"".equals(SharedPreferences.getString("ADDRESS", mContext))) {
-            startActivity(new Intent(mContext, MerchantActivity.class));
+            startActivity(new Intent(mContext, HomeActivity.class));
             finish();
         } else {
             signUp = findViewById(R.id.sign_up);

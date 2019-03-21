@@ -16,9 +16,45 @@
         android:maxWidth="927sp"
         android:maxHeight="334sp"
         android:padding="25sp"/>
+    <LinearLayout
+        android:id="@+id/linear_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_below="@id/header_image">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="April 5, 2019"
+                android:textColor="#FFF"
+                android:textSize="25sp"
+                android:paddingLeft="15sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Open 2pm - 9pm"
+                android:textColor="#FFF"
+                android:textSize="15sp"
+                android:gravity="bottom|end"
+                android:paddingRight="15sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
     <ScrollView
         android:layout_above="@+id/manipis"
-        android:layout_below="@id/header_image"
+        android:layout_below="@+id/linear_date"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout

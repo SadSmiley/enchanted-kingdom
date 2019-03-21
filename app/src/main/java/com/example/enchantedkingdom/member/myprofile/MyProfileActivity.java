@@ -15,6 +15,7 @@ import static com.example.enchantedkingdom.Utility.setFont;
 
 public class MyProfileActivity extends AppCompatActivity {
 
+    private TextView header;
     private TextView name;
     private TextView birthday;
     private TextView email;
@@ -37,6 +38,7 @@ public class MyProfileActivity extends AppCompatActivity {
 
     public void initializeComponent(){
         new BottomNavigation(mContext);
+        header = findViewById(R.id.text_header);
         name = findViewById(R.id.name);
         birthday = findViewById(R.id.birthdate);
         email = findViewById(R.id.email);
@@ -45,6 +47,7 @@ public class MyProfileActivity extends AppCompatActivity {
         expirationDate = findViewById(R.id.expiration_date);
         magicPoints = findViewById(R.id.magic_point);
 
+        header.setTypeface(setFont(mContext,SIGNIKA_BOLD_FONT_PATH));
         name.setTypeface(setFont(mContext,SIGNIKA_BOLD_FONT_PATH));
         birthday.setTypeface(setFont(mContext,SIGNIKA_BOLD_FONT_PATH));
         email.setTypeface(setFont(mContext,SIGNIKA_BOLD_FONT_PATH));

@@ -9,6 +9,7 @@ import android.view.MenuItem;
 
 import com.example.enchantedkingdom.R;
 import com.example.enchantedkingdom.member.buyticket.BuyTicketCalendar;
+import com.example.enchantedkingdom.member.home.HomeActivity;
 import com.example.enchantedkingdom.member.index.IndexActivity;
 import com.example.enchantedkingdom.member.merchant.MerchantActivity;
 import com.example.enchantedkingdom.member.showandentertainment.ShowAndEntertainmentActivity;
@@ -28,7 +29,7 @@ public class BottomNavigation extends BottomNavigationView {
                 switch (menuItem.getItemId())
                 {
                     case R.id.action_home:
-                        context.startActivity(new Intent(context,MerchantActivity.class));
+                        context.startActivity(new Intent(context,HomeActivity.class));
                         break;
                     case R.id.action_map:
                         context.startActivity(new Intent(context, ParkMapActivity.class));
